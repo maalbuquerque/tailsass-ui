@@ -1,0 +1,29 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.tooltip {
+  @extend .relative;
+  @extend .inline-flex;
+
+  &-content {
+    @extend .absolute;
+    @extend .hidden;
+    @extend .text-nowrap;
+    @extend .rounded;
+    @extend .px-2;
+    @extend .py-1;
+    @extend .text-xs;
+    background: var(--slate-900);
+    color: var(--white);
+    z-index: var(--ui-z-dropdown);
+    bottom: calc(100% + 0.4rem);
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  &:hover .tooltip-content,
+  &:focus-within .tooltip-content {
+    @extend .block;
+  }
+}

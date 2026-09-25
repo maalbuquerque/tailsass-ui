@@ -1,0 +1,46 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.popover {
+  @extend .relative;
+  @extend .inline-block;
+
+  &-trigger {
+    @extend .cursor-pointer;
+  }
+
+  &-panel {
+    @extend .absolute;
+    @extend .mt-2;
+    @extend .hidden;
+    @extend .rounded-md;
+    @extend .border-1;
+    @extend .border-solid;
+    @extend .p-4;
+    @extend .text-sm;
+    min-width: 14rem;
+    background: var(--ui-surface);
+    border-color: var(--ui-border);
+    box-shadow: var(--ui-shadow);
+    color: var(--ui-text);
+    z-index: var(--ui-z-dropdown);
+
+    &-right {
+      right: 0;
+    }
+  }
+
+  &-title {
+    @extend .mb-1;
+    @extend .font-bold;
+  }
+
+  &-body {
+    color: var(--ui-muted);
+  }
+
+  &:focus-within .popover-panel,
+  &.is-open .popover-panel {
+    @extend .block;
+  }
+}

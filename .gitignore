@@ -1,0 +1,8 @@
+node_modules/
+dist/
+website/node_modules/
+website/.next/
+website/out/
+website/src/vendor/
+*.log
+.DS_Store

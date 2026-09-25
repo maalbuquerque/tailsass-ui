@@ -1,0 +1,50 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.table-wrap {
+  @extend .w-full;
+  @extend .overflow-auto;
+  @extend .rounded-lg;
+  @extend .border-1;
+  @extend .border-solid;
+  border-color: var(--ui-border);
+}
+
+.table {
+  @extend .w-full;
+  border-collapse: collapse;
+  background: var(--ui-surface);
+  color: var(--ui-text);
+
+  th,
+  td {
+    @extend .px-4;
+    @extend .py-3;
+    @extend .text-left;
+    @extend .text-sm;
+    border-bottom: 1px solid var(--ui-border);
+  }
+
+  th {
+    @extend .font-bold;
+    background: var(--ui-secondary);
+    color: var(--ui-text);
+  }
+
+  tbody tr:hover {
+    background: color-mix(in srgb, var(--ui-secondary) 70%, transparent);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  &-compact {
+    th,
+    td {
+      @extend .px-3;
+      @extend .py-2;
+      @extend .text-xs;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use '@maalbuquerque/tailsass/src/index' as *;
+@use '@maalbuquerque/tailsass/src/color-palette' as *;
+@use '@maalbuquerque/tailsass/src/colors' with (
+  $colors: (
+    'slate': palette('slate'),
+    'purple': palette('purple'),
+    'red': palette('red'),
+    'emerald': palette('emerald'),
+    'amber': palette('amber'),
+    'blue': palette('blue'),
+  )
+);
+@use 'index' as *;

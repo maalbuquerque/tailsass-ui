@@ -1,0 +1,52 @@
+{
+  "name": "@maalbuquerque/tailsass-ui",
+  "version": "1.0.0",
+  "description": "Semantic UI components built on Tailsass utilities.",
+  "main": "dist/tailsass-ui.css",
+  "style": "dist/tailsass-ui.css",
+  "sass": "src/index.scss",
+  "scripts": {
+    "build": "sass build.scss dist/tailsass-ui.css --no-source-map --style=expanded --load-path=src --load-path=node_modules",
+    "build:min": "sass build.scss dist/tailsass-ui.min.css --no-source-map --style=compressed --load-path=src --load-path=node_modules",
+    "prepare": "npm run build && npm run build:min",
+    "watch": "sass build.scss dist/tailsass-ui.css --style=expanded --load-path=src --load-path=node_modules --watch"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "ui",
+    "components",
+    "tailsass",
+    "utility-first"
+  ],
+  "author": "maalbuquerque",
+  "license": "MIT",
+  "type": "commonjs",
+  "peerDependencies": {
+    "@maalbuquerque/tailsass": "^1.0.4"
+  },
+  "devDependencies": {
+    "@maalbuquerque/tailsass": "file:../tailsass",
+    "sass": "^1.97.3"
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "sass": "./src/index.scss",
+      "style": "./dist/tailsass-ui.css",
+      "default": "./dist/tailsass-ui.css"
+    },
+    "./src/*": "./src/*",
+    "./dist/*": "./dist/*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}

@@ -1,0 +1,53 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.card {
+  @extend .rounded-lg;
+  @extend .border-1;
+  @extend .border-solid;
+  background: var(--ui-surface);
+  border-color: var(--ui-border);
+  // Keep visible so dropdowns/popovers inside are not clipped.
+  overflow: visible;
+
+  &-header {
+    @extend .border-b-1;
+    @extend .border-solid;
+    @extend .px-5;
+    @extend .py-4;
+    border-color: var(--ui-border);
+  }
+
+  &-title {
+    @extend .m-0;
+    @extend .text-xl;
+    @extend .font-bold;
+    color: var(--ui-text);
+  }
+
+  &-subtitle {
+    @extend .mt-1;
+    @extend .mb-0;
+    @extend .text-sm;
+    color: var(--ui-muted);
+  }
+
+  &-body {
+    @extend .p-5;
+    color: var(--ui-text);
+  }
+
+  &-footer {
+    @extend .border-t-1;
+    @extend .border-solid;
+    @extend .px-5;
+    @extend .py-4;
+    @extend .flex;
+    @extend .gap-3;
+    border-color: var(--ui-border);
+  }
+
+  &-accent {
+    border-top: 3px solid var(--ui-primary);
+  }
+}

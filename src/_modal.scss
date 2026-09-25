@@ -1,0 +1,85 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.modal {
+  @extend .fixed;
+  @extend .hidden;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .p-4;
+  inset: 0;
+  z-index: var(--ui-z-modal);
+
+  &.is-open {
+    @extend .flex;
+  }
+
+  &-backdrop {
+    @extend .absolute;
+    inset: 0;
+    background: var(--ui-overlay);
+  }
+
+  &-dialog {
+    @extend .relative;
+    @extend .w-full;
+    @extend .overflow-hidden;
+    @extend .rounded-lg;
+    @extend .border-1;
+    @extend .border-solid;
+    max-width: 32rem;
+    background: var(--ui-surface);
+    border-color: var(--ui-border);
+    box-shadow: var(--ui-shadow);
+  }
+
+  &-header {
+    @extend .flex;
+    @extend .items-center;
+    @extend .justify-between;
+    @extend .gap-3;
+    @extend .border-b-1;
+    @extend .border-solid;
+    @extend .px-5;
+    @extend .py-4;
+    border-color: var(--ui-border);
+  }
+
+  &-title {
+    @extend .m-0;
+    @extend .text-lg;
+    @extend .font-bold;
+    color: var(--ui-text);
+  }
+
+  &-close {
+    @extend .cursor-pointer;
+    @extend .rounded-md;
+    @extend .border-0;
+    @extend .p-2;
+    @extend .text-sm;
+    background: transparent;
+    color: var(--ui-muted);
+
+    &:hover {
+      background: var(--ui-secondary);
+      color: var(--ui-text);
+    }
+  }
+
+  &-body {
+    @extend .p-5;
+    color: var(--ui-text);
+  }
+
+  &-footer {
+    @extend .flex;
+    @extend .justify-end;
+    @extend .gap-3;
+    @extend .border-t-1;
+    @extend .border-solid;
+    @extend .px-5;
+    @extend .py-4;
+    border-color: var(--ui-border);
+  }
+}

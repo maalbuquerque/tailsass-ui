@@ -1,0 +1,23 @@
+@use 'variables';
+
+.ui-title {
+  font-family: var(--ui-font-display);
+  color: var(--ui-text);
+}
+
+.ui-muted {
+  color: var(--ui-muted);
+}
+
+.ui-lead {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ui-muted);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--purple-700), var(--purple-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

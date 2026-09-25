@@ -1,0 +1,72 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.dropdown {
+  @extend .relative;
+  @extend .inline-block;
+
+  &-trigger {
+    @extend .cursor-pointer;
+  }
+
+  &-menu {
+    @extend .absolute;
+    @extend .mt-2;
+    @extend .hidden;
+    @extend .overflow-hidden;
+    @extend .rounded-md;
+    @extend .border-1;
+    @extend .border-solid;
+    @extend .py-1;
+    min-width: 12rem;
+    background: var(--ui-surface);
+    border-color: var(--ui-border);
+    box-shadow: var(--ui-shadow);
+    z-index: var(--ui-z-dropdown);
+
+    &-right {
+      right: 0;
+    }
+
+    &-left {
+      left: 0;
+    }
+  }
+
+  &-item {
+    @extend .block;
+    @extend .w-full;
+    @extend .cursor-pointer;
+    @extend .border-0;
+    @extend .px-4;
+    @extend .py-2;
+    @extend .text-left;
+    @extend .text-sm;
+    background: transparent;
+    color: var(--ui-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: var(--ui-secondary);
+      outline: none;
+    }
+
+    &-danger {
+      color: var(--ui-danger);
+    }
+  }
+
+  &-divider {
+    @extend .my-1;
+    @extend .border-0;
+    @extend .border-t-1;
+    @extend .border-solid;
+    border-color: var(--ui-border);
+  }
+
+  &:focus-within .dropdown-menu,
+  &.is-open .dropdown-menu {
+    @extend .block;
+  }
+}

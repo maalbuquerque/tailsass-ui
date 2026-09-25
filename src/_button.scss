@@ -1,0 +1,126 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.btn {
+  @extend .inline-flex;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .gap-2;
+  @extend .cursor-pointer;
+  @extend .border-1;
+  @extend .border-solid;
+  @extend .font-bold;
+  @extend .text-center;
+  @extend .transition-colors;
+  border-color: transparent;
+  border-radius: var(--ui-radius);
+  line-height: 1.25;
+  text-decoration: none;
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    @extend .cursor-not-allowed;
+    @extend .opacity-50;
+    pointer-events: none;
+  }
+
+  &-xs {
+    @extend .px-2;
+    @extend .py-1;
+    @extend .text-xs;
+  }
+
+  &-sm {
+    @extend .px-3;
+    @extend .py-2;
+    @extend .text-sm;
+  }
+
+  &-md {
+    @extend .px-4;
+    @extend .py-2;
+    @extend .text-base;
+  }
+
+  &-lg {
+    @extend .px-6;
+    @extend .py-3;
+    @extend .text-lg;
+  }
+
+  &-xl {
+    @extend .px-8;
+    @extend .py-4;
+    @extend .text-xl;
+  }
+
+  &-primary {
+    background: var(--ui-primary);
+    color: var(--ui-primary-text);
+    border-color: var(--ui-primary);
+
+    &:hover {
+      background: var(--ui-primary-hover);
+      border-color: var(--ui-primary-hover);
+    }
+  }
+
+  &-secondary {
+    background: var(--ui-secondary);
+    color: var(--ui-secondary-text);
+    border-color: var(--ui-border);
+
+    &:hover {
+      background: var(--ui-secondary-hover);
+    }
+  }
+
+  &-danger {
+    background: var(--ui-danger);
+    color: var(--ui-primary-text);
+    border-color: var(--ui-danger);
+
+    &:hover {
+      background: var(--ui-danger-hover);
+      border-color: var(--ui-danger-hover);
+    }
+  }
+
+  &-ghost {
+    background: transparent;
+    color: var(--ui-primary);
+    border-color: transparent;
+
+    &:hover {
+      background: var(--ui-secondary);
+    }
+  }
+
+  &-outline {
+    background: transparent;
+    color: var(--ui-primary);
+    border-color: var(--ui-primary);
+
+    &:hover {
+      background: var(--ui-primary);
+      color: var(--ui-primary-text);
+    }
+  }
+
+  &-link {
+    background: transparent;
+    @extend .border-0;
+    @extend .p-0;
+    color: var(--ui-primary);
+    border-radius: 0;
+
+    &:hover {
+      color: var(--ui-primary-hover);
+      text-decoration: underline;
+    }
+  }
+
+  &-block {
+    @extend .w-full;
+  }
+}

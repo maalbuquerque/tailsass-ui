@@ -1,0 +1,79 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.toast-viewport {
+  @extend .fixed;
+  @extend .flex;
+  @extend .flex-col;
+  @extend .gap-3;
+  @extend .p-4;
+  right: 0;
+  bottom: 0;
+  z-index: var(--ui-z-toast);
+  max-width: 24rem;
+  width: 100%;
+  pointer-events: none;
+}
+
+.toast {
+  @extend .flex;
+  @extend .items-start;
+  @extend .gap-3;
+  @extend .rounded-md;
+  @extend .border-1;
+  @extend .border-solid;
+  @extend .p-4;
+  @extend .text-sm;
+  background: var(--ui-surface);
+  border-color: var(--ui-border);
+  box-shadow: var(--ui-shadow);
+  color: var(--ui-text);
+  pointer-events: auto;
+
+  &-content {
+    @extend .flex-1;
+    min-width: 0;
+  }
+
+  &-title {
+    @extend .font-bold;
+    @extend .mb-1;
+  }
+
+  &-body {
+    color: var(--ui-muted);
+  }
+
+  &-close {
+    @extend .cursor-pointer;
+    @extend .rounded-md;
+    @extend .border-0;
+    @extend .p-1;
+    @extend .text-sm;
+    flex-shrink: 0;
+    line-height: 1;
+    background: transparent;
+    color: var(--ui-muted);
+
+    &:hover {
+      background: var(--ui-secondary);
+      color: var(--ui-text);
+    }
+  }
+
+  &-success {
+    border-color: var(--ui-success);
+  }
+
+  &-danger {
+    border-color: var(--ui-danger);
+  }
+
+  &-warning {
+    border-color: var(--ui-warning);
+  }
+
+  &-info {
+    border-color: var(--ui-info);
+  }
+}

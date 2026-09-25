@@ -1,0 +1,47 @@
+:root {
+  --font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-size: 16px;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--slate-50);
+  color: var(--slate-900);
+}
+
+p {
+  line-height: 1.65;
+}
+
+.docs-shell {
+  min-height: 100vh;
+}
+
+.docs-shell-main {
+  min-height: 100vh;
+}
+
+.docs-main {
+  max-width: 52rem;
+}
+
+.docs-nav-label {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.docs-code {
+  line-height: 1.55;
+}
+
+.docs-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}

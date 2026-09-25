@@ -1,0 +1,46 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.nav {
+  @extend .flex;
+  @extend .items-center;
+  @extend .gap-2;
+  @extend .w-full;
+
+  &-brand {
+    @extend .font-bold;
+    @extend .text-lg;
+    color: var(--ui-primary);
+    text-decoration: none;
+  }
+
+  &-spacer {
+    @extend .flex-1;
+  }
+
+  &-link {
+    @extend .rounded-md;
+    @extend .px-3;
+    @extend .py-2;
+    @extend .text-sm;
+    @extend .transition-colors;
+    color: var(--ui-text);
+    text-decoration: none;
+
+    &:hover {
+      background: var(--ui-secondary);
+      color: var(--ui-primary);
+    }
+
+    &.is-active {
+      background: color-mix(in srgb, var(--ui-primary) 12%, transparent);
+      color: var(--ui-primary);
+      font-weight: bold;
+    }
+  }
+
+  &-vertical {
+    @extend .flex-col;
+    @extend .items-stretch;
+  }
+}
