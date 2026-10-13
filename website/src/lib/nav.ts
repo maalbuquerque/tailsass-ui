@@ -21,6 +21,7 @@ export const navSections: NavSection[] = [
     title: 'Components',
     items: [
       { label: 'Button', href: '/docs/button' },
+      { label: 'Spinner', href: '/docs/spinner' },
       { label: 'Form', href: '/docs/form' },
       { label: 'Card', href: '/docs/card' },
       { label: 'Dropdown', href: '/docs/dropdown' },

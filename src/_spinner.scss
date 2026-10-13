@@ -1,0 +1,68 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+/**
+ * Loading circle.
+ * <span class="spinner spinner-md" role="status" aria-label="Loading"></span>
+ */
+.spinner {
+  @extend .inline-block;
+  @extend .shrink-0;
+  @extend .rounded-full;
+  @extend .border-solid;
+  @extend .animate-spin;
+  box-sizing: border-box;
+  border-color: color-mix(in srgb, var(--ui-primary) 25%, transparent);
+  border-top-color: var(--ui-primary);
+  vertical-align: middle;
+
+  &-xs {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-width: 2px;
+  }
+
+  &-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 2px;
+  }
+
+  &-md {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 3px;
+  }
+
+  &-lg {
+    width: 2rem;
+    height: 2rem;
+    border-width: 3px;
+  }
+
+  &-xl {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-width: 4px;
+  }
+
+  &-muted {
+    border-color: color-mix(in srgb, var(--ui-muted) 30%, transparent);
+    border-top-color: var(--ui-muted);
+  }
+
+  &-white {
+    border-color: rgb(255 255 255 / 0.3);
+    border-top-color: var(--white, #fff);
+  }
+
+  &-danger {
+    border-color: color-mix(in srgb, var(--ui-danger) 25%, transparent);
+    border-top-color: var(--ui-danger);
+  }
+
+  &-success {
+    border-color: color-mix(in srgb, var(--ui-success) 25%, transparent);
+    border-top-color: var(--ui-success);
+  }
+}

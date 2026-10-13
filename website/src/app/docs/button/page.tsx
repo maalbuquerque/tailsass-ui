@@ -20,6 +20,11 @@ const variantsCode = `<button class="btn btn-md btn-primary" type="button">Prima
 <button class="btn btn-md btn-outline" type="button">Outline</button>
 <button class="btn btn-md btn-link" type="button">Link</button>`
 
+const groupCode = `<div class="btn-group" role="group" aria-label="Period">
+  <button type="button" class="btn btn-sm btn-secondary is-active">7d</button>
+  <button type="button" class="btn btn-sm btn-secondary">30d</button>
+</div>`
+
 export default function ButtonPage() {
   return (
     <div>
@@ -88,6 +93,29 @@ export default function ButtonPage() {
             <button className="btn btn-md btn-primary" type="button" disabled>
               Disabled
             </button>
+          </div>
+        </Example>
+      </div>
+
+      <DocH2 id="group">Button group</DocH2>
+      <DocP>
+        Use <code>btn-group</code> for segmented filters. Mark the selected control with{' '}
+        <code>is-active</code> or <code>aria-pressed=&quot;true&quot;</code>.
+      </DocP>
+      <div className="mb-4">
+        <CodeBlock language="html" code={groupCode} />
+      </div>
+      <div className="mb-8">
+        <Example>
+          <div className="docs-demo-row">
+            <div className="btn-group" role="group" aria-label="Period">
+              <button type="button" className="btn btn-sm btn-secondary is-active">
+                7d
+              </button>
+              <button type="button" className="btn btn-sm btn-secondary">
+                30d
+              </button>
+            </div>
           </div>
         </Example>
       </div>

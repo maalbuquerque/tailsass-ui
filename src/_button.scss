@@ -124,3 +124,51 @@
     @extend .w-full;
   }
 }
+
+/**
+ * Segmented control / filter group.
+ * <div class="btn-group" role="group">
+ *   <button type="button" class="btn btn-sm btn-secondary is-active">7d</button>
+ *   <button type="button" class="btn btn-sm btn-secondary">30d</button>
+ * </div>
+ */
+.btn-group {
+  @extend .inline-flex;
+  @extend .items-stretch;
+  border-radius: var(--ui-radius);
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+
+  > .btn {
+    margin: 0;
+    border-radius: 0;
+    border-color: transparent;
+    border-right: 1px solid var(--ui-border);
+    box-shadow: none;
+
+    &:last-child {
+      border-right-width: 0;
+    }
+
+    &:hover {
+      z-index: 1;
+    }
+
+    &.is-active,
+    &[aria-pressed='true'] {
+      background: var(--ui-primary);
+      color: var(--ui-primary-text);
+      border-color: var(--ui-primary);
+    }
+
+    &.btn-primary.is-active,
+    &.btn-secondary.is-active,
+    &.btn-ghost.is-active,
+    &.btn-outline.is-active {
+      background: var(--ui-primary);
+      color: var(--ui-primary-text);
+      border-color: var(--ui-primary);
+    }
+  }
+}
