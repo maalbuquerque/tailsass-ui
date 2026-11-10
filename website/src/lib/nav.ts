@@ -26,6 +26,7 @@ export const navSections: NavSection[] = [
       { label: 'Card', href: '/docs/card' },
       { label: 'Dropdown', href: '/docs/dropdown' },
       { label: 'Nav', href: '/docs/nav' },
+      { label: 'Tabs', href: '/docs/tabs' },
       { label: 'Modal', href: '/docs/modal' },
       { label: 'Popover', href: '/docs/popover' },
       { label: 'Tooltip', href: '/docs/tooltip' },

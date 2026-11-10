@@ -1,0 +1,83 @@
+@use '@maalbuquerque/tailsass/src/index';
+@use 'variables';
+
+.tabs {
+  @extend .w-full;
+
+  &-list {
+    @extend .flex;
+    @extend .flex-wrap;
+    @extend .items-end;
+    @extend .gap-1;
+    @extend .border-b-1;
+    @extend .border-solid;
+    border-color: var(--ui-border);
+  }
+
+  &-tab {
+    @extend .inline-flex;
+    @extend .items-center;
+    @extend .justify-center;
+    @extend .cursor-pointer;
+    @extend .border-0;
+    @extend .border-b-2;
+    @extend .border-solid;
+    @extend .px-4;
+    @extend .py-3;
+    @extend .text-sm;
+    @extend .font-bold;
+    @extend .transition-colors;
+    background: transparent;
+    border-color: transparent;
+    color: var(--ui-muted);
+    margin-bottom: -1px;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--ui-text);
+    }
+
+    &.is-active,
+    &[aria-selected='true'] {
+      border-color: var(--ui-primary);
+      color: var(--ui-primary);
+    }
+
+    &:disabled,
+    &[aria-disabled='true'] {
+      @extend .cursor-not-allowed;
+      @extend .opacity-50;
+      pointer-events: none;
+    }
+  }
+
+  &-panel {
+    @extend .pt-6;
+  }
+
+  &-pills {
+    .tabs-list {
+      @extend .gap-2;
+      border-bottom: none;
+    }
+
+    .tabs-tab {
+      @extend .rounded-md;
+      @extend .border-0;
+      margin-bottom: 0;
+      background: transparent;
+      color: var(--ui-muted);
+
+      &:hover {
+        background: var(--ui-secondary);
+        color: var(--ui-text);
+      }
+
+      &.is-active,
+      &[aria-selected='true'] {
+        background: color-mix(in srgb, var(--ui-primary) 12%, transparent);
+        color: var(--ui-primary);
+      }
+    }
+  }
+}

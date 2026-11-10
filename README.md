@@ -38,7 +38,7 @@ Override theme tokens in `:root` (see `src/_variables.scss`).
 
 ## Components
 
-Button, form, card, dropdown, typography, nav, modal, popover, tooltip, toast, table.
+Button, form, card, dropdown, typography, nav, tabs, modal, popover, tooltip, toast, table.
 
 ## License
 

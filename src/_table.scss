@@ -3,11 +3,16 @@
 
 .table-wrap {
   @extend .w-full;
-  @extend .overflow-auto;
   @extend .rounded-lg;
   @extend .border-1;
   @extend .border-solid;
+  // Visible so dropdowns/popovers inside cells are not clipped into scrollbars.
+  overflow: visible;
   border-color: var(--ui-border);
+
+  &-scroll {
+    @extend .overflow-auto;
+  }
 }
 
 .table {
@@ -23,6 +28,11 @@
     @extend .text-left;
     @extend .text-sm;
     border-bottom: 1px solid var(--ui-border);
+  }
+
+  th.text-right,
+  td.text-right {
+    text-align: right;
   }
 
   th {

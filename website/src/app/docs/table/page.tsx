@@ -37,8 +37,9 @@ export default function TablePage() {
       <p className="docs-nav-label mb-3 text-sm font-bold text-purple-600">Components</p>
       <h1 className="mb-4 text-4xl font-bold text-slate-900">Table</h1>
       <DocLead>
-        Wrap with <code>table-wrap</code> for overflow. Add <code>table-compact</code> for denser
-        cells.
+        Wrap with <code>table-wrap</code> (overflow visible so dropdowns aren’t clipped). Use{' '}
+        <code>table-wrap-scroll</code> when you need horizontal scroll. Add{' '}
+        <code>table-compact</code> for denser cells.
       </DocLead>
 
       <DocH2 id="basic">Basic</DocH2>
